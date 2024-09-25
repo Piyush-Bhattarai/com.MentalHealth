@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Mental Health Support Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-pattern {
+            background-color: #f0f4f8;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem; /* Rounded corners */
+        }
+        .image-container img {
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.05); /* Zoom effect */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-pattern min-h-screen flex flex-col">
+<header class="bg-blue-600 text-white shadow-md sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+        <h1 class="text-2xl font-bold mb-2 md:mb-0">Mental Health Support Network</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:text-blue-200 transition duration-300">Home</a></li>
+                <li><a href="About.html" class="hover:text-blue-200 transition duration-300">About Us</a></li>
+                <li><a href="Services.html" class="hover:text-blue-200 transition duration-300">Our Services</a></li>
+                <li><a href="Gallery.html" class="hover:text-blue-200 transition duration-300">Gallery</a></li>
+                <li><a href="Contact.html" class="hover:text-blue-200 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-grow container mx-auto px-4 py-8">
+    <section id="gallery" class="max-w-6xl mx-auto">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6 text-center">Gallery</h1>
+        <p class="text-xl text-gray-600 mb-12 text-center">Explore our events and activities through photos.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/mental-health-concept-with-brain_23-2148526097.jpg" alt="Mental Health Concept" class="w-full h-auto object-cover">
+                <div class="overlay">Mental Health Concept</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/mental-health-awareness-ribbon_23-2148526098.jpg" alt="Mental Health Awareness" class="w-full h-auto object-cover">
+                <div class="overlay">Mental Health Awareness</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/mental-health-day-concept_23-2148526101.jpg" alt="Mental Health Day" class="w-full h-auto object-cover">
+                <div class="overlay">Mental Health Day</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15861.jpg" alt="Support Group Meeting" class="w-full h-auto object-cover">
+                <div class="overlay">Support Group Meeting</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/medium-shot-woman-therapist-with-clipboard_23-2148759113.jpg" alt="Therapy Session" class="w-full h-auto object-cover">
+                <div class="overlay">Therapy Session</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/side-view-woman-meditating-indoors_23-2149484942.jpg" alt="Meditation Practice" class="w-full h-auto object-cover">
+                <div class="overlay">Meditation Practice</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/young-woman-practicing-yoga-home_1303-20706.jpg" alt="Yoga for Mental Health" class="w-full h-auto object-cover">
+                <div class="overlay">Yoga for Mental Health</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/people-putting-their-hands-together-close-up_23-2148917279.jpg" alt="Community Support" class="w-full h-auto object-cover">
+                <div class="overlay">Community Support</div>
+            </div>
+            <div class="image-container">
+                <img src="https://img.freepik.com/free-photo/medium-shot-smiley-woman-outdoors_23-2149193615.jpg" alt="Outdoor Wellness Activity" class="w-full h-auto object-cover">
+                <div class="overlay">Outdoor Wellness Activity</div>
+            </div>
+        </div>
+
+        <!-- Optional Call to Action -->
+        <p class="text-center mt-12 text-lg text-gray-700">Join us in our next event to promote mental health awareness!</p>
+
+    </section>
+</main>
+
+<footer class="bg-blue-800 text-white text-center p-6 mt-auto">
+    <p class="text-lg">&copy; 2024 Mental Health Support Network. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
